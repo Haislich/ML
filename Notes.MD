@@ -31,3 +31,17 @@ We add each value as a column and for every row activate only the correct value.
     $$\frac{Value-\mu}{\sigma}$$
 
 Standardization doesn't map the values between 0 and 1 so it might still be problematic for some algorithms, but in return standardization is less more aftected by the outliers. 
+
+# Cross-Validation
+It's a statistical method used to estimate the skill of machine learning models using a resampling procedure.
+It's used to estimate how well a certain model performs on unseen data when the data available is limited.
+In general we should have three kinds of datasets:
+- ## Training Set: 
+    A set used to train candidate models
+- ## Validation Set:
+    Used to evaluate the candidate models and choose the best
+- ## Test set:
+    Used for a final unbiased evaluation of the model chosen.
+The problem is that we may not be able to get all of them.
+The idea is then that each sample acts both as training and validation, but not at the same time.
+We perform $k$ rounds of learning, in which $\frac{1}{k}$ of the data is held out as validation set.
